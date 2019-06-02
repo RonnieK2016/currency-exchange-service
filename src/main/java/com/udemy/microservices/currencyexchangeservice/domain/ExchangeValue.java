@@ -1,9 +1,6 @@
 package com.udemy.microservices.currencyexchangeservice.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -11,10 +8,12 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class ExchangeValue {
 
     private Long id;
     private String from;
     private String to;
     private BigDecimal conversionMultiple;
+    private int port;
 }
